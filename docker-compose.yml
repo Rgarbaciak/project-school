@@ -1,0 +1,107 @@
+version: "3.8"
+
+networks:
+  my-network:
+    driver: bridge
+
+services:
+  class-service:
+    build:
+      context: ./services/class
+      dockerfile: Dockerfile
+    ports:
+      - "3001:3001"
+    environment:
+      - NODE_ENV=production
+    deploy:
+      resources:
+        limits:
+          cpus: "0.5"
+          memory: "512M"
+    networks:
+      - my-network
+
+  grade-service:
+    build:
+      context: ./services/grade
+      dockerfile: Dockerfile
+    ports:
+      - "3002:3002"
+    environment:
+      - NODE_ENV=production
+    deploy:
+      resources:
+        limits:
+          cpus: "0.5"
+          memory: "512M"
+    networks:
+      - my-network
+
+  user-service:
+    build:
+      context: ./services/user
+      dockerfile: Dockerfile
+    ports:
+      - "3003:3003"
+    environment:
+      - NODE_ENV=production
+    deploy:
+      resources:
+        limits:
+          cpus: "0.5"
+          memory: "512M"
+    networks:
+      - my-network
+
+  course-service:
+    build:
+      context: ./services/course
+      dockerfile: Dockerfile
+    ports:
+      - "3004:3004"
+    environment:
+      - NODE_ENV=production
+    deploy:
+      resources:
+        limits:
+          cpus: "0.5"
+          memory: "512M"
+    networks:
+      - my-network
+
+  api-gateway:
+    build:
+      context: ./api-gateway
+      dockerfile: Dockerfile
+    ports:
+      - "3005:3005"
+    environment:
+      - NODE_ENV=production
+    deploy:
+      resources:
+        limits:
+          cpus: "0.5"
+          memory: "512M"
+    networks:
+      - my-network
+    depends_on:
+      - class-service
+      - grade-service
+      - user-service
+      - course-service
+
+  # front-end:
+  #   build:
+  #     context: ./school-frontend
+  #     dockerfile: Dockerfile
+  #   ports:
+  #     - "3000:3000"
+  #   environment:
+  #     - NODE_ENV=production
+  #   deploy:
+  #     resources:
+  #       limits:
+  #         cpus: "1"
+  #         memory: "1024M"
+  #   networks:
+  #     - my-network

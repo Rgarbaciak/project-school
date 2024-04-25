@@ -1,0 +1,37 @@
+type Query {
+  studentsInClass(userId: ID!): [Student!]!
+  courseByClassId(userId: ID!): [Course]
+}
+
+type Mutation {
+  addGradeToStudent(
+    firstName: String!
+    lastName: String!
+    examName: String!
+    score: String!
+    date: String!
+  ): Grade!
+}
+
+type Student {
+  _id: ID!
+  firstName: String!
+  lastName: String!
+}
+
+type Course {
+  _id: ID!
+  name: String!
+  professor: String!
+  schedule: String!
+  room: String!
+  class: String!
+}
+
+type Grade {
+  _id: ID!
+  studentId: ID!
+  examName: String!
+  score: String!
+  date: String!
+}

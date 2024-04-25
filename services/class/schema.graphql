@@ -1,0 +1,19 @@
+type Query {
+  classes: [Class!]!
+  classesById(id: ID!): Class
+  getClassByUserId(userId: ID!): Class
+}
+
+type Mutation {
+  createClass(name: String!, professor: ID!): Class!
+  updateClass(id: ID!, name: String, professor: ID): Class!
+  deleteClass(id: ID!): Class
+  addStudentsToClass(classId: ID!, studentIds: [ID!]!): Class!
+}
+
+type Class {
+  _id: ID!
+  name: String!
+  professor: ID!
+  studentIds: [ID!]!
+}

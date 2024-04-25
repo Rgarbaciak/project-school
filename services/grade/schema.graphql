@@ -1,0 +1,30 @@
+type Grade {
+  _id: ID!
+  studentId: ID!
+  score: String!
+  examName: String!
+  date: String!
+}
+
+type Query {
+  grades: [Grade!]!
+  grade(id: ID!): Grade
+  gradesByUserId(userId: ID!): [Grade!]!
+}
+
+type Mutation {
+  createGrade(
+    studentId: ID!
+    score: String!
+    examName: String!
+    date: String!
+  ): Grade!
+  updateGrade(
+    id: ID!
+    studentId: ID!
+    score: String!
+    examName: String!
+    date: String!
+  ): Grade!
+  deleteGrade(id: ID!): Grade!
+}
