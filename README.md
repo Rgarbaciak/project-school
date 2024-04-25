@@ -63,11 +63,3 @@ Pour obtenir de l'aide ou signaler des problèmes, ouvrez un ticket dans la sect
 Les contributions à ce projet sont bienvenues. Si vous souhaitez contribuer, veuillez forker le dépôt, créer une branche pour vos modifications et soumettre une pull request.
 EOF
 
-# Ajouter le fichier README.md au dépôt Git
-git add README.md
-
-# Commit le changement
-git commit -m "Ajout du fichier README.md"
-
-# Poussez les changements vers votre dépôt Git (remplacez 'main' par votre branche si nécessaire)
-git push origin main
