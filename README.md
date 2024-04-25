@@ -52,6 +52,12 @@ Cela démarrera le serveur de développement et ouvrira automatiquement votre na
 
 ## Utilisation
 
+### Comptes de Démonstration
+- **Professeur**:
+  - Email: test1@example.com
+  - Mot de passe: "Test"
+
+
 Après avoir démarré les services backend et frontend, vous pouvez naviguer dans l'interface utilisateur pour créer, modifier et afficher des utilisateurs. Utilisez les fonctionnalités selon le rôle auquel vous vous connectez.
 
 ## Support
