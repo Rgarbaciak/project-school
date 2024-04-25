@@ -13,18 +13,18 @@ Project School est une application qui utilise une architecture microservices av
 ### Cloner le dépôt
 Pour commencer, clonez le dépôt sur votre machine locale en utilisant la commande suivante:
 
-\`\`\`bash
+```
 git clone https://yourrepositoryurl.git
 cd project-school
-\`\`\`
+```
 
 ### Démarrer les services Backend avec Docker
 
 Assurez-vous que Docker est en cours d'exécution sur votre système. Puis, dans le répertoire racine du projet, exécutez :
 
-\`\`\`bash
+```
 docker-compose up
-\`\`\`
+```
 
 Cette commande construira les images Docker nécessaires et démarrera les conteneurs pour les différents services du backend. Assurez-vous que tous les fichiers \`Dockerfile\` et \`docker-compose.yml\` sont correctement configurés avant d'exécuter cette commande.
 
@@ -32,21 +32,21 @@ Cette commande construira les images Docker nécessaires et démarrera les conte
 
 Ouvrez un nouveau terminal et naviguez vers le sous-dossier du frontend :
 
-\`\`\`bash
+```bash
 cd school-frontend
-\`\`\`
+```
 
 Installez toutes les dépendances nécessaires avec npm :
 
-\`\`\`bash
+```bash
 npm install
-\`\`\`
+```
 
 Une fois l'installation terminée, lancez l'application frontend :
 
-\`\`\`bash
+```bash
 npm start
-\`\`\`
+```
 
 Cela démarrera le serveur de développement et ouvrira automatiquement votre navigateur à l'adresse \`http://localhost:3000\`.
 
