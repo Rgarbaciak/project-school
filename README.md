@@ -1,5 +1,4 @@
-# Créer le fichier README.md avec le contenu nécessaire
-cat <<EOF > README.md
+
 # Project School
 
 ## Description
